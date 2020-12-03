@@ -9994,6 +9994,18 @@ a:focus {
   color: #3a3b45 !important;
 }
 
+.icon-good {
+  color: var(--success) !important;
+}
+
+.icon-warning {
+  color: var(--warning) !important;
+}
+
+.icon-danger {
+  color: var(--danger) !important;
+}
+
 .icon-circle {
   height: 2.5rem;
   width: 2.5rem;

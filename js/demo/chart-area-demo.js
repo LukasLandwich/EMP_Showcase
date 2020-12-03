@@ -32,9 +32,9 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00"],
     datasets: [{
-      label: "Earnings",
+      label: "Actual Consumption",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -46,7 +46,37 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40],
+    },
+    {
+      label: "Forecast Consumption",
+      lineTension: 0.3,
+      backgroundColor: "rgba(23, 123, 47, 0.05)",
+      borderColor: "rgba(23, 123, 47, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(23, 123, 47, 1)",
+      pointBorderColor: "rgba(23, 123, 47, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(23, 123, 47, 1)",
+      pointHoverBorderColor: "rgba(23, 123, 47, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [0, 10, 50, 15, 10, 20, 15, 30, 25, 30, 15, 20],
+    },
+    {
+      label: "Average Consumption",
+      lineTension: 0.3,
+      backgroundColor: "rgba(205, 123, 100, 0.05)",
+      borderColor: "rgba(205, 123, 100, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(205, 123, 100, 1)",
+      pointBorderColor: "rgba(205, 123, 100, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(205, 123, 100, 1)",
+      pointHoverBorderColor: "rgba(205, 123, 100, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
     }],
   },
   options: {
@@ -62,7 +92,7 @@ var myLineChart = new Chart(ctx, {
     scales: {
       xAxes: [{
         time: {
-          unit: 'date'
+          unit: 'time'
         },
         gridLines: {
           display: false,
@@ -78,7 +108,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value) + ' kW/h';
           }
         },
         gridLines: {
@@ -110,7 +140,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + ' kW/h';
         }
       }
     }
