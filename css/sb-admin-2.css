@@ -10006,6 +10006,10 @@ a:focus {
   color: var(--danger) !important;
 }
 
+.icon-yellow {
+  color: var(--yellow) !important;
+}
+
 .icon-circle {
   height: 2.5rem;
   width: 2.5rem;
