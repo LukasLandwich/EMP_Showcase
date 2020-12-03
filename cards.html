@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Cards</title>
+    <title>EMP - Card Showcase</title>
 
      <!-- Custom fonts for this template-->
      <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -303,7 +303,7 @@
                         
                             setInterval(clock, 1000);
     
-                            window.onload(clock());
+                            window.onload = clock();
                         </script>
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -407,12 +407,12 @@
 
                      <!-- Earnings (Monthly) Card Example -->
                      <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card border-left-warning shadow h-100 py-2" hoverable="true">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            Costs(Daily)</div>
+                                            Beispiel mit hover Effekt -> Mehr Infos</div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">€400</div>
                                     </div>
                                     <div class="col-auto">
@@ -430,12 +430,20 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            Costs(Daily)</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">€400</div>
+                                            Beispiel mit icon tooltip
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="grey"  xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                                <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"></path>
+                                                <circle cx="8" cy="4.5" r="1"></circle>
+                                                <title> Hier wird eine Erklärung stehen warum die Warnung angezeigt wird</title>
+                                            </svg>
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">€400 </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x icon-warning"></i>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -10002,6 +10002,18 @@ a:focus {
   color: var(--warning) !important;
 }
 
+.card[hoverable="true"]:hover .icon-warning {
+  color: var(--orange) !important;
+}
+.card[hoverable="true"]:hover .text-warning {
+  color: var(--orange) !important;
+}
+
+.card[hoverable="true"]:hover.border-left-warning {
+  border-left: 0.25rem solid var(--orange) !important;
+}
+
+
 .icon-danger {
   color: var(--danger) !important;
 }
